@@ -1,0 +1,65 @@
+@import "./abstracts/mixins.scss";
+@import "./base/colors.scss";
+@import "./base/reset.scss";
+
+@keyframes animacija1 {
+    0% {
+        left: 0;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        left: 150px;
+        transform: rotate(360deg);
+    }
+    
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    background-image: url(./images/blur-clean.jpg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+li {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    @include border();
+    border-radius: 100%;
+    margin: 120px;
+    padding: 80px;
+    position: relative;
+    animation: animacija1 2s ease-in-out;
+    animation-fill-mode: 1;
+    animation-fill-mode: forwards;
+}
+
+li:first-child {
+    background-color: $background-color1;
+    animation-delay: 1.5s;
+}
+
+li:nth-child(2) {
+    background-color: $background-color2;
+    animation-delay: 3s;
+}
+
+li:nth-child(3) {
+    background-color: $background-color3;
+    animation-delay: 4.5s;
+}

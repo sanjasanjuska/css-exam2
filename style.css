@@ -1,0 +1,95 @@
+@-webkit-keyframes animacija1 {
+  0% {
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 150px;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animacija1 {
+  0% {
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    left: 150px;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  background-image: url(./images/blur-clean.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 100vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+li {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  height: 200px;
+  border: 10px solid black;
+  border-radius: 100%;
+  margin: 120px;
+  padding: 80px;
+  position: relative;
+  -webkit-animation: animacija1 2s ease-in-out;
+          animation: animacija1 2s ease-in-out;
+  -webkit-animation-fill-mode: 1;
+          animation-fill-mode: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+li:first-child {
+  background-color: blueviolet;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+li:nth-child(2) {
+  background-color: violet;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+li:nth-child(3) {
+  background-color: whitesmoke;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+/*# sourceMappingURL=style.css.map */
